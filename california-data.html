@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>California Coronavirus - data</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+<style>
+.y.axi text {
+    fill: steelblue;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.bar2 {
+  fill: orange;
+}
+.x.axis path {
+  display: none;
+}
+</style>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Coronavirus</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    -->
+  </div>
+</nav>
+
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">California Corona virus cases</h1>
+      <p>This uses data from mercury news and the california dhs site. Last updated Mar 12, 2020 - 7AM PST. <a href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx">Source.</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2>198</h2>
+        <p>confirmed cases</p>
+      </div>
+      <div class="col-md-4">
+        <h2>4</h2>
+        <p>deaths</p>
+      </div>
+      <div class="col-md-4">
+        <h2>11,100</h2>
+        <p>people are self monitoring</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <h1> Infections by age </h1>
+    <div class="expenseschart" id="expenseschart">
+    </div>
+    <h1> Infections by source </h1>
+    <div class="sourcechart" id="sourcechart">
+    </div>
+    <h2>Santa Clara County</h2>
+    <p>March 12, 2020 5:15pm <a href="https://www.mercurynews.com/2020/03/12/coronavirus-18-new-cases-identified-in-santa-clara-county/">Source</a></p>
+    <div class="row">
+      <div class="col-md-4">
+        <h2>66</h2>
+        <p>confirmed cases</p>
+      </div>
+      <div class="col-md-4">
+        <h2>1</h2>
+        <p>deaths</p>
+      </div>
+      <div class="col-md-4">
+        <h2></h2>
+        <p></p>
+      </div>
+    </div>
+    <h3>Severity</h3>
+    <div class="santaclaraseverity" id="santaclaraseverity">
+    </div>
+    <!-- <div class="row">
+      <div class="col-md-4">
+      <h3>to be added later</h3>
+
+         <p>infections by date</p>
+         <p>infections by county</p>
+         </div>
+     </div> -->
+  </div> <!-- /container -->
+    <script>
+    draw("#expenseschart", "infections-by-age.json", "Age Range");
+    draw("#sourcechart", "infections-source.json", "Sources");
+    draw("#santaclaraseverity", "santa-clara-severity.json", "Severity");
+
+    function draw(selector, url, xTitle) {
+    var margin = {top: 80, right: 80, bottom: 80, left: 80},
+        width = 1000 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+    var x = d3.scale.ordinal()
+        .rangeRoundBands([0, width], .1);
+    var y0 = d3.scale.linear().domain([300, 1100]).range([height, 0]);
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+    // create yAxis
+    var yAxis = d3.svg.axis().scale(y0).ticks(6).orient("left");
+    var svg = d3.select(selector).append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("class", "graph")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    d3.json(url,
+        function (data) {
+      x.domain(data.map(function(d) { return d.month; }));
+    //scale the data range
+    //sets the max automatically to the maximum of either years
+      y0.domain([0, d3.max(data, function(d) { return Math.max(d.current); })]);
+      
+      svg.append("g")
+          .attr("class", "x axis")
+          .attr("transform", "translate(0," + height + ")")
+          .call(xAxis)
+    	.append("text")
+    	  .attr("x", 950)
+    	  .attr("dx", "-2em")
+    	  .style("text-anchor", "end")
+    	  .text(xTitle);
+      svg.append("g")
+    	  .attr("class", "y axis axis")
+    	  .attr("transform", "translate(0,0)")
+    	  .call(yAxis)
+    	.append("text")
+    	  .attr("y", 6)
+    	  .attr("dy", "-2em")
+    	  .style("text-anchor", "end")
+    	  .style("text-anchor", "end")
+    	  .text("Infections");
+    	
+      bars = svg.selectAll(".bar").data(data).enter();
+    
+      bars.append("rect")
+          .attr("class", "bar2")
+          .attr("x", function(d) { return x(d.month); })
+          .attr("width", x.rangeBand())
+          .attr("y", function(d) { return y0(d.current); })
+    	  .attr("height", function(d,i,j) { return height - y0(d.current); }); 
+
+    function type(d) {
+      d.current = +d.current;
+      return d;
+    }
+    });
+    }
+    </script>
+
+</main>
+
+<footer class="container">
+  <p>&copy; Judy Y Fong 2020</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script></body>
+</html>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+</body>
+</html>
