@@ -1,0 +1,27 @@
+Counties,Infected,Residents,Non-residents/Unknown,Deaths
+"Contra Costa County",26,25,1,0
+Alameda County,9,7,0,0
+Marin County,4,3,1,0
+Napa County,2,0,2,0
+San Mateo County,20,12,8,0
+Santa Clara County,79,66,0,1
+Stanislaus County,2,N/A,N/A,0
+Calaveras County,2,N/A,N/A,0
+San Francisco County,21,11,3,0
+Solano County,6,5,1,0
+Sonoma County,3,2,1,0
+Placer County,8,N/A,N/A,1
+Sacramento County,17,4,N/A,1
+Yolo County,1,1,0,0
+Los Angeles County,7,6,1,1
+Riverside County,1,N/A,N/A,0
+Orange County,1,N/A,N/A,N/A
+Fresno County,1 (Grand Princess cruise ship),N/A,N/A,0
+Santa Cruz County,7 (1 Grand Princess cruise ship),N/A,N/A,0
+Madera County,1 (Grand Princess cruise ship),N/A,N/A,0
+Ventura County,1 (Grand Princess cruise ship),N/A,N/A,N/A
+Shasta County,1,N/A,N/A,N/A
+Humboldt Count,1,N/A,N/A,0
+San Joaquin County,6 (1 from Grand Princess cruise ship),N/A,N/A,0
+San Benito County,2,N/A,N/A,0
+Total,252,,,5
