@@ -53,7 +53,7 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0">
@@ -128,9 +128,9 @@
      </div> -->
   </div> <!-- /container -->
     <script>
-    draw("#expenseschart", "infections-by-age.json", "Age Range");
-    draw("#sourcechart", "infections-source.json", "Sources");
-    draw("#santaclaraseverity", "santa-clara-severity.json", "Severity");
+    draw("#expenseschart", "json/infections-by-age.json", "Age Range");
+    draw("#sourcechart", "json/infections-source.json", "Sources");
+    draw("#santaclaraseverity", "json/santa-clara-severity.json", "Severity");
 
     function draw(selector, url, xTitle) {
     var margin = {top: 80, right: 80, bottom: 80, left: 80},
