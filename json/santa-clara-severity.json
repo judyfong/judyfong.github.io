@@ -1,4 +1,4 @@
-[{"month":"not-hospitalized\n46","current":46},
-{"month":"hospitalized\n37","current":37},
+[{"month":"not-hospitalized\n40","current":40},
+{"month":"hospitalized\n36","current":36},
 {"month":"recovered\n1","current":1},
-{"month":"died\n1","current":1}]
+{"month":"died\n2","current":2}]

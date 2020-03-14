@@ -80,7 +80,7 @@
     <div class="row">
       <div class="col-md-4">
         <h2>247*</h2>
-        <p>confirmed cases + 5 additional from Grand Princess cruise ship = 252 according to <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html">NYTimes</a> Mar 13, 2020</p>
+        <p>confirmed cases + 5 additional from Grand Princess cruise ship; 314 infections according to <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html">NYTimes</a> Mar 14, 2020</p>
       </div>
       <div class="col-md-4">
         <h2>5</h2>
@@ -101,18 +101,14 @@
     <div class="sourcechart" id="sourcechart">
     </div>
     <h1>Counties with known infections</h1>
-    <p>March 13, 2020 12PM <a href="https://www.sfgate.com/bayarea/article/Bay-Area-coronavirus-updates-Contra-Costa-County-15129171.php">Source</a> and Mar 13, 2020 4:30PM PDT <a href="https://www.mercurynews.com/2020/03/04/map-coronavirus-cases-in-the-bay-area-northern-california/">Source</a> <a href="https://losangeles.cbslocal.com/2020/03/04/la-county-declares-emergency-over-coronavirus-6-new-confirmed-cases/">Source</a></p>
+    <p>March 14, 2020 7:30AM PDT<a href="https://www.sfgate.com/bayarea/article/Bay-Area-coronavirus-updates-Contra-Costa-County-15129171.php">Source</a> and Mar 13, 2020 4:30PM PDT <a href="https://www.mercurynews.com/2020/03/04/map-coronavirus-cases-in-the-bay-area-northern-california/">Source</a> <a href="https://losangeles.cbslocal.com/2020/03/04/la-county-declares-emergency-over-coronavirus-6-new-confirmed-cases/">Source</a></p>
     <table class="table" id="counties-infected">
     </table>
     <h3>Santa Clara County</h3>
-    <p>March 13, 2020 <a href="https://www.mercurynews.com/2020/03/12/coronavirus-18-new-cases-identified-in-santa-clara-county/">Source</a> <a href="https://www.mercurynews.com/2020/03/13/santa-clara-county-bans-gatherings-over-100-people-as-confirmed-coronavirus-case-count-reaches-79/">Source</a></p>
-    <div class="santaclaraseverity" id="santaclaraseverity">
-    <div class="row">
-      <div class="col-md-4">
-        <h2>43</h2>
-        <p>community transmissions</p>
-      </div>
+    <p>March 13, 2020 <a href="https://www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/home.aspx">Source</a></p>
+    <div class="santaclarasource" id="santaclarasource">
     </div>
+    <div class="santaclaraseverity" id="santaclaraseverity">
     </div>
     <!-- <div class="row">
       <div class="col-md-4">
@@ -127,6 +123,7 @@
     draw("#expenseschart", "json/infections-by-age.json", "Age Range");
     draw("#sourcechart", "json/infections-source.json", "Sources");
     draw("#santaclaraseverity", "json/santa-clara-severity.json", "Severity");
+    draw("#santaclarasource", "json/santa-clara-source.json", "Source");
 
     function draw(selector, url, xTitle) {
     var margin = {top: 80, right: 80, bottom: 80, left: 80},
