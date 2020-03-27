@@ -66,7 +66,6 @@ d3.csv("cali-infections-by-date.csv", function(error, data) {
                 .duration(200)		
                 .style("opacity", .9);		
             div	.html(formatTime(d.date) + "<br/>"  + d.infections)	
-                .style("font", "10px sans-serif")
                 .style("left", (d3.event.pageX) + "px")		
                 .style("right", (d3.event.pageX) + "px")		
                 .style("top", (d3.event.pageY - 28) + "px");	

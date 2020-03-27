@@ -1,3 +1,3 @@
-[{"month":"not-hospitalized\n369","current":369},
-{"month":"hospitalized\n154","current":154},
-{"month":"died\n19","current":19}]
+[{"month":"not-hospitalized","current":369},
+{"month":"hospitalized","current":154},
+{"month":"died","current":19}]

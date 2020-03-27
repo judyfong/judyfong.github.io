@@ -136,72 +136,12 @@ div.tooltip {
          </div>
      </div> -->
   </div> <!-- /container -->
+    <script src="json-charts.js"></script>
     <script>
-    draw("#expenseschart", "json/infections-by-age.json", "Age Range");
-    draw("#sourcechart", "json/infections-source.json", "Sources");
-    draw("#santaclaraseverity", "json/santa-clara-severity.json", "Severity");
-    draw("#santaclaraage", "json/santa-clara-age.json", "Age Range");
-
-    function draw(selector, url, xTitle) {
-    var margin = {top: 80, right: 80, bottom: 80, left: 80},
-        width = 1000 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
-    var x = d3.scale.ordinal()
-        .rangeRoundBands([0, width], .1);
-    var y0 = d3.scale.linear().domain([300, 1100]).range([height, 0]);
-    var xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("bottom");
-    // create yAxis
-    var yAxis = d3.svg.axis().scale(y0).ticks(6).orient("left");
-    var svg = d3.select(selector).append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-        .attr("class", "graph")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    d3.json(url,
-        function (data) {
-      x.domain(data.map(function(d) { return d.month; }));
-    //scale the data range
-    //sets the max automatically to the maximum of either years
-      y0.domain([0, d3.max(data, function(d) { return Math.max(d.current); })]);
-
-      svg.append("g")
-          .attr("class", "x axis")
-          .attr("transform", "translate(0," + height + ")")
-          .call(xAxis)
-    	.append("text")
-    	  .attr("x", 950)
-    	  .attr("dx", "-2em")
-    	  .style("text-anchor", "end")
-    	  .text(xTitle);
-      svg.append("g")
-    	  .attr("class", "y axis axis")
-    	  .attr("transform", "translate(0,0)")
-    	  .call(yAxis)
-    	.append("text")
-    	  .attr("y", 6)
-    	  .attr("dy", "-2em")
-    	  .style("text-anchor", "end")
-    	  .style("text-anchor", "end")
-    	  .text("Infections");
-
-      bars = svg.selectAll(".bar").data(data).enter();
-
-      bars.append("rect")
-          .attr("class", "bar2")
-          .attr("x", function(d) { return x(d.month); })
-          .attr("width", x.rangeBand())
-          .attr("y", function(d) { return y0(d.current); })
-    	  .attr("height", function(d,i,j) { return height - y0(d.current); });
-
-    function type(d) {
-      d.current = +d.current;
-      return d;
-    }
-    });
-    }
+        draw("#expenseschart", "json/infections-by-age.json", "Age Range");
+        draw("#sourcechart", "json/infections-source.json", "Sources");
+        draw("#santaclaraseverity", "json/santa-clara-severity.json", "Severity");
+        draw("#santaclaraage", "json/santa-clara-age.json", "Age Range");
     </script>
     <script src="json-to-graph.js"></script>
     <script src="csv-to-table.js"></script>
