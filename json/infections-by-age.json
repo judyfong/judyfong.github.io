@@ -1,4 +1,5 @@
-[{"month":"0-17","current":13},
-{"month":"18-64","current":392},
-{"month":"65+","current":188},
-{"month":"Unknown","current":5}]
+[{"month":"0-17","current":37},
+{"month":"18-49","current":1505},
+{"month":"50-64","current":764},
+{"month":"65+","current":678},
+{"month":"Unknown","current":22}]

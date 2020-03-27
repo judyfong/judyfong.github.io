@@ -71,7 +71,7 @@
   <div class="jumbotron">
     <div class="container">
       <h1 class="display-3">California Coronavirus cases</h1>
-      <p>This uses data from the california department of public health site. Last updated Mar 17, 2020 6PM PDT. <a href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx">Source.</a></p>
+      <p>This uses data from the california department of public health site. Last updated Mar 25, 2020 2PM PDT. <a href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx">Source.</a></p>
     </div>
   </div>
 
@@ -79,17 +79,12 @@
     <!-- Example row of columns -->
     <div class="row">
       <div class="col-md-4">
-        <h2>598</h2>
-        <p>confirmed cases + additional from the Grand Princess cruise ship; 
-           875 infections according to <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html">NYTimes</a> Mar 19, 2020</p>
+        <h2>3,006</h2>
+        <p>confirmed cases + additional from the Grand Princess cruise ship; </p>
       </div>
       <div class="col-md-4">
-        <h2>13</h2>
+        <h2>65</h2>
         <p>deaths</p>
-      </div>
-      <div class="col-md-4">
-        <h2>11,900</h2>
-        <p>people are self monitoring</p>
       </div>
     </div>
 
@@ -105,13 +100,13 @@
     <p>March 16, 2020 11AM PDT <a href="https://www.sfgate.com/bayarea/article/Coronavirus-updates-Bay-Area-San-Francisco-Marin-15134170.php">Source</a>
         <br/>Mar 17, 2020 5:45PM PDT <a href="https://www.mercurynews.com/2020/03/04/map-coronavirus-cases-in-the-bay-area-northern-california/">Source</a>
         <br/>Mar 18, 2020 12PM PDT <a href="http://publichealth.lacounty.gov/media/Coronavirus/">Source</a>
-        <br/><a href="https://www.sacbee.com/news/california/article240712141.html">Source</a>
+        <br/>The sacbee has a map of all the counties so I will no longer be updating that data. <a href="https://www.sacbee.com/news/california/article240712141.html">Source</a>
         <br/> <a href="https://losangeles.cbslocal.com/2020/03/04/la-county-declares-emergency-over-coronavirus-6-new-confirmed-cases/">Source</a></p>
-    <table class="table" id="counties-infected">
-    </table>
+    <!--<table class="table" id="counties-infected">
+    </table> -->
     <h3>Santa Clara County</h3>
-    <p>March 17, 2020 <a href="https://www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/home.aspx">Source</a></p>
-    <div class="santaclarasource" id="santaclarasource">
+    <p>March 25, 2020 <a href="https://www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/home.aspx">Source</a></p>
+    <div class="santaclaraage" id="santaclaraage">
     </div>
     <div class="santaclaraseverity" id="santaclaraseverity">
     </div>
@@ -128,7 +123,7 @@
     draw("#expenseschart", "json/infections-by-age.json", "Age Range");
     draw("#sourcechart", "json/infections-source.json", "Sources");
     draw("#santaclaraseverity", "json/santa-clara-severity.json", "Severity");
-    draw("#santaclarasource", "json/santa-clara-source.json", "Source");
+    draw("#santaclaraage", "json/santa-clara-age.json", "Age Range");
 
     function draw(selector, url, xTitle) {
     var margin = {top: 80, right: 80, bottom: 80, left: 80},
