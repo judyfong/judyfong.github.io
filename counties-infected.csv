@@ -1,31 +1,49 @@
-Counties,Infected,Residents,Non-residents/Unknown,Deaths
-Contra Costa County,41,25,1,0
-Alameda County,34,7,0,0
-Marin County,15,3,1,0
-Napa County,2,0,2,0
-San Mateo County,80,12,8,1
-Stanislaus County,5,N/A,N/A,0
-Calaveras County,2,N/A,N/A,0
-San Francisco County,40,11,3,0
-Solano County,8,5,1,0
-Sonoma County,8,2,1,0
-Nevada County,1,N/A,N/A,0
-Placer County,8,N/A,N/A,1
-Sacramento County,40,4,N/A,2
-Yolo County,2,2,0,0
-Los Angeles County,190,6,1,1
-Riverside County,1,N/A,N/A,0
-Orange County,1,N/A,N/A,N/A
-Fresno County,2 (1 Grand Princess cruise ship),N/A,N/A,0
-Santa Cruz County,13 (1 Grand Princess cruise ship),N/A,N/A,0
-Madera County,1 (Grand Princess cruise ship),N/A,N/A,0
-Ventura County,1 (Grand Princess cruise ship),N/A,N/A,N/A
-Shasta County,1,N/A,N/A,N/A
-Humboldt Count,1,N/A,N/A,0
-San Joaquin County,14 (1 from Grand Princess cruise ship),N/A,N/A,2
-San Benito County,5,N/A,N/A,0
-Tulare County,5,N/A,N/A,0
-San Diego County,N/A,N/A,N/A,0
-Monterey County,2,N/A,N/A,0
-Santa Clara County,175,66,0,6
-Total,598+5,,,13
+Counties,Infected,Deaths
+Contra Costa County,131,1
+Alameda County,164,4
+Marin County,65,0
+Napa County,7,0
+San Mateo County,239,6
+Stanislaus County,19,0
+Calaveras County,3,0
+Amador,2,0
+San Francisco County,279,3
+Solano County,34,0
+Sonoma County,49,1
+Mendocino County,2,0
+Colusa County,1,0
+Sutter County,2,0
+Yuba County,3,0
+Glenn County,1,0
+Nevada County,8,0
+Placer County,26,1
+Sacramento County,164,6
+El Dorado County,9,0
+Yolo County,13,1
+Los Angeles County,1465,26
+Riverside County,151,8
+Orange County,256,1
+Fresno County,27 (1 Grand Princess cruise ship),0
+Santa Cruz County,34 (1 Grand Princess cruise ship),0
+Tuolumne County,1,0
+Merced County,4,0
+Mono County,6,0
+Madera County,10 (Grand Princess cruise ship),1
+Ventura County,61 (Grand Princess cruise ship),1
+Kern County,35,0
+Santa Barbara County,32,0
+San Luis Obispo County,59,0
+Shasta County,3,1
+Siskiyou County,3,0
+Humboldt County,12,0
+Butte County,5,0
+San Joaquin County,85 (1 from Grand Princess cruise ship),3
+San Benito County,12,1
+Tulare County,16,0
+Kings County,1,0
+Inyo County,2,0
+San Diego County,341,3
+Monterey County,27,1
+San Bernardino County,55,3
+Imperial County,17,0
+Santa Clara County,574,19
