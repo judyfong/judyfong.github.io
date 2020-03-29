@@ -1,5 +1,6 @@
 //from https://bl.ocks.org/d3noob/a22c42db65eb00d4e369
 // Set the dimensions of the canvas / graph
+function graph2div(divName, csvFilename) {
 var margin = {top: 50, right: 20, bottom: 30, left: 90},
     width = 900 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
@@ -30,7 +31,7 @@ var div = d3.select("body").append("div")
     .style("opacity", 0);
 
 // Adds the svg canvas
-var svg = d3.select("#line-graph")
+var svg = d3.select(divName)
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -39,7 +40,7 @@ var svg = d3.select("#line-graph")
               "translate(" + margin.left + "," + margin.top + ")");
 
 // Get the data
-d3.csv("cali-infections-by-date.csv", function(error, data) {
+d3.csv(csvFilename, function(error, data) {
     data.forEach(function(d) {
         d.date = parseDate(d.date);
         d.infections = +d.infections;
@@ -94,3 +95,4 @@ d3.csv("cali-infections-by-date.csv", function(error, data) {
     	  .text("Infections");
 
 });
+}

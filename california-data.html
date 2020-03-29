@@ -106,7 +106,10 @@ div.tooltip {
 
     <hr>
     <h1> California cases over time </h1>
-    <div class="line-graph" id="line-graph">
+    <div class="cases-graph" id="cases-graph">
+    </div>
+    <h1> California deaths over time </h1>
+    <div class="deaths-graph" id="deaths-graph">
     </div>
     <h1> Infections by age </h1>
     <div class="expenseschart" id="expenseschart">
@@ -147,6 +150,10 @@ div.tooltip {
         draw("#santaclaraage", "json/santa-clara-age.json", "Age Range");
     </script>
     <script src="json-to-graph.js"></script>
+    <script>
+        graph2div("#cases-graph","cali-infections-by-date.csv");
+        graph2div("#deaths-graph","cali-deaths-by-date.csv");
+    </script>
     <script src="csv-to-table.js"></script>
 
 </main>
