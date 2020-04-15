@@ -1,9 +1,9 @@
 //from https://bl.ocks.org/d3noob/a22c42db65eb00d4e369
 // Set the dimensions of the canvas / graph
 function graph2div(divName, csvFilename) {
-var margin = {top: 50, right: 20, bottom: 30, left: 90},
-    width = 900 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+var margin = {top: 50, right: 70, bottom: 30, left: 70},
+    width = ((window.innerWidth < 1000) ? window.innerWidth : window.innerWidth * 0.5) - margin.left - margin.right,
+    height = .4 * width;
 
 // Parse the date / time
 var parseDate = d3.time.format("%d-%b-%y").parse;
@@ -90,7 +90,6 @@ d3.csv(csvFilename, function(error, data) {
     .append("text")
     	  .attr("y", 6)
     	  .attr("dy", "-2em")
-    	  .style("text-anchor", "end")
     	  .style("text-anchor", "end")
     	  .text("Infections");
 

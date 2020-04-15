@@ -1,7 +1,7 @@
     function draw(selector, url, xTitle) {
     var margin = {top: 80, right: 80, bottom: 80, left: 80},
-        width = 1000 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+        width = ((window.innerWidth < 400) ? window.innerWidth : window.innerWidth * 0.5) - margin.left - margin.right,
+        height = .405 * width;
     var x = d3.scale.ordinal()
         .rangeRoundBands([0, width], .1);
     var y0 = d3.scale.linear().domain([300, 1100]).range([height, 0]);
@@ -31,7 +31,7 @@
           .attr("transform", "translate(0," + height + ")")
           .call(xAxis)
     	.append("text")
-    	  .attr("x", 950)
+    	  .attr("x", width * 1.14)
     	  .attr("dx", "-2em")
     	  .style("text-anchor", "end")
     	  .text(xTitle);
@@ -42,7 +42,6 @@
     	.append("text")
     	  .attr("y", 6)
     	  .attr("dy", "-2em")
-    	  .style("text-anchor", "end")
     	  .style("text-anchor", "end")
     	  .text("Infections");
 
