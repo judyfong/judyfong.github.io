@@ -12,7 +12,7 @@
    fólk spara pening og fylla út bandarísk skatturinn umsókn fyrir irs.gov og nota APa frá skatturinn.is. \
    Við erum með 1 milljón á mestu leyti fyrir gæðastjóri forrit og forritarar. Meira upplýsingar er á [turbo-Skatturinn vefsíðu](https://github.com/judyfong/turbo-Skatturinn/tree/master). \
       Hlutverk þín er til að fá korti með afslatti frá Label Iceland fyrir viðskiptavinir okkar. Annað er að skipuleggja verkefni fyrir mig, moses, og @afk0901, og profkaralesari okkar. Jaimie getur kannski verið gæðastjóri. Mita og vinir hennar getur verið Machine learning rannsóknarmenn. Þriðja hlutverk er að tala saman með Bjarti og hvernig að skipuleggja pening fyrir fyrirtæki best og ákveða hversu mikið pening ætlum við að eyða hvert mánuði. Síðasta er að hugsa hvernig að auglýsa TurboSkatturinn og hver er target hópurinn okkar eða niche fyrir okkar fyirrtæki og forrit. Null punktur velur nafnið af hlutverk þín í fyrirtæki.  \
-   markmiðið okkar er að fá 10 fyrirtæki fólk ($800-1000) og 30 almenn fólk ($400-500).
+   markmiðið okkar er að fá 10 fyrirtæki fólk ($800-1000) og 30 almenn fólk ($400-500) fyrsta ár.
 
    Bestu kveðjur,
 
