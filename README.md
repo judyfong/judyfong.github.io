@@ -18,6 +18,9 @@ dictionary: https://github.com/judyfong/dictionary \
 bækurupdates: https://github.com/baekur-online/baekurupdates \
 MiH: https://github.com/judyfong/Mih
 
+### snowflakeNFTs
+Collaborations with [Michal Borsky (RanoRaraku)](https://github.com/RanoRaraku) and [Alexander Moses(adm91)](https://github.com/adm91)
+
 ### R. Kjaran ehf
 The Icelandic powerlifting association's registration and scoreboard software which 
 works with Icelandic names. In the future, we have a several aims. One is to use 
