@@ -19,7 +19,7 @@ bækurupdates: https://github.com/baekur-online/baekurupdates \
 MiH: https://github.com/judyfong/Mih
 
 ### [snowflakeNFTs](https://github.com/snowflakeNFTs)
-Collaborations with [Michal Borsky (RanoRaraku)](https://github.com/RanoRaraku) and [Alexander Moses(adm91)](https://github.com/adm91). This includes blogs, board game creations, publishing books, and web 3.0 
+Collaborations with [Michal Borsky (RanoRaraku)](https://github.com/RanoRaraku), [speechscience](https://github.com/speechscience) and [Alexander Moses(adm91)](https://github.com/adm91). This includes blogs, board game creations, publishing books, and web 3.0 
 stuff to name a few.
 
 ### R. Kjaran ehf
