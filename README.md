@@ -13,8 +13,8 @@ This also includes the Long Range Controller project with WYung.
 ### Language technology
 kaldi-speaker-diarization: https://github.com/cadia-lvl/kaldi-speaker-diarization \
 tjáskipti: https://github.com/Einfaldlega-Hugmyndir/tjaskipti \
-WebRICE: https://github.com/judyfong/WebRICE
-dictionary: https://github.com/judyfong/dictionary
+WebRICE: https://github.com/judyfong/WebRICE \
+dictionary: https://github.com/judyfong/dictionary \
 bækurupdates: https://github.com/baekur-online/baekurupdates \
 MiH: https://github.com/judyfong/Mih
 
