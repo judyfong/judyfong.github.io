@@ -18,4 +18,11 @@ dictionary: https://github.com/judyfong/dictionary \
 bækurupdates: https://github.com/baekur-online/baekurupdates \
 MiH: https://github.com/judyfong/Mih
 
+### R. Kjaran ehf
+The Icelandic powerlifting association's registration and scoreboard software which 
+works with Icelandic names. In the future, we have a several aims. One is to use 
+Text-to-speech software to announce names. Another is to integrate it with 
+the [owlcms](https://github.com/jflamy/owlcms4) software. Third is to create an 
+updated and better interface to [results.kraft.is](https://results.kraft.is/).
+
 
